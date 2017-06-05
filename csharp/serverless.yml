@@ -12,28 +12,28 @@ functions:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
     memorySize: 128
     events:
-      - schedule: rate(10 minutes)
+      - schedule: rate(4 hours)
 
   memory-256:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
     memorySize: 256
     events:
-      - schedule: rate(10 minutes)
+      - schedule: rate(4 hours)
 
   memory-512:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
     memorySize: 512
     events:
-      - schedule: rate(10 minutes)
+      - schedule: rate(4 hours)
 
   memory-1024:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
     memorySize: 1024
     events:
-      - schedule: rate(10 minutes)
+      - schedule: rate(4 hours)
 
   memory-1536:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
     memorySize: 1536
     events:
-      - schedule: rate(10 minutes)
+      - schedule: rate(4 hours)
