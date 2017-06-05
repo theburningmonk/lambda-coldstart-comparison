@@ -1,0 +1,36 @@
+service: aws-coldstart-python
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  memory-128:
+    handler: handler.hello
+    memorySize: 128
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-256:
+    handler: handler.hello
+    memorySize: 256
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-512:
+    handler: handler.hello
+    memorySize: 512
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-1024:
+    handler: handler.hello
+    memorySize: 1024
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-1536:
+    handler: handler.hello
+    memorySize: 1536
+    events:
+      - schedule: rate(10 minutes)

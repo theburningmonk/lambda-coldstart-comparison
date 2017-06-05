@@ -1,0 +1,39 @@
+service: aws-coldstart-java
+
+provider:
+  name: aws
+  runtime: java8
+
+package:
+  artifact: target/hello-dev.jar
+
+functions:
+  memory-128:
+    handler: com.serverless.Handler
+    memorySize: 128
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-256:
+    handler: com.serverless.Handler
+    memorySize: 256
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-512:
+    handler: com.serverless.Handler
+    memorySize: 512
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-1024:
+    handler: com.serverless.Handler
+    memorySize: 1024
+    events:
+      - schedule: rate(10 minutes)
+
+  memory-1536:
+    handler: com.serverless.Handler
+    memorySize: 1536
+    events:
+      - schedule: rate(10 minutes)
