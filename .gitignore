@@ -6,3 +6,5 @@ csharp/obj/*/
 .idea/
 
 java/target/
+
+node_modules/
