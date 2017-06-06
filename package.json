@@ -1,0 +1,23 @@
+{
+  "name": "lambda-coldstart-comparison",
+  "version": "1.0.0",
+  "description": "Comparing the coldstart time of AWS Lambda functions using a variety of language runtime and memory size",
+  "main": "invoke-functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theburningmonk/lambda-coldstart-comparison.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theburningmonk/lambda-coldstart-comparison/issues"
+  },
+  "homepage": "https://github.com/theburningmonk/lambda-coldstart-comparison#readme",
+  "dependencies": {
+    "aws-sdk": "^2.64.0",
+    "co": "^4.6.0"
+  }
+}
