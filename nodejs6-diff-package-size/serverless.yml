@@ -1,0 +1,221 @@
+service: aws-coldstart-nodejs6-package-size
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+package:
+  individually: true
+  exclude:
+    - no-deps/**
+    - bluebird-only/**
+    - bluebird-lodash-only/**
+    - large-deps/**
+    - extra-large-deps/**
+    - ping/**
+
+functions:
+  no-deps-128:
+    handler: no-deps/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - no-deps/**
+    events:
+      - schedule: rate(4 hours)
+  no-deps-256:
+    handler: no-deps/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - no-deps/**
+    events:
+      - schedule: rate(4 hours)
+  no-deps-512:
+    handler: no-deps/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - no-deps/**
+    events:
+      - schedule: rate(4 hours)
+  no-deps-1024:
+    handler: no-deps/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - no-deps/**
+    events:
+      - schedule: rate(4 hours)
+  no-deps-1536:
+    handler: no-deps/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - no-deps/**
+    events:
+      - schedule: rate(4 hours)
+
+  bluebird-only-128:
+    handler: bluebird-only/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - bluebird-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-only-256:
+    handler: bluebird-only/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - bluebird-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-only-512:
+    handler: bluebird-only/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - bluebird-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-only-1024:
+    handler: bluebird-only/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - bluebird-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-only-1536:
+    handler: bluebird-only/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - bluebird-only/**
+    events:
+      - schedule: rate(4 hours)
+
+  bluebird-lodash-only-128:
+    handler: bluebird-lodash-only/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - bluebird-lodash-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-lodash-only-256:
+    handler: bluebird-lodash-only/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - bluebird-lodash-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-lodash-only-512:
+    handler: bluebird-lodash-only/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - bluebird-lodash-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-lodash-only-1024:
+    handler: bluebird-lodash-only/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - bluebird-lodash-only/**
+    events:
+      - schedule: rate(4 hours)
+  bluebird-lodash-only-1536:
+    handler: bluebird-lodash-only/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - bluebird-lodash-only/**
+    events:
+      - schedule: rate(4 hours)
+
+  large-deps-128:
+    handler: large-deps/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  large-deps-256:
+    handler: large-deps/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  large-deps-512:
+    handler: large-deps/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  large-deps-1024:
+    handler: large-deps/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  large-deps-1536:
+    handler: large-deps/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - large-deps/**
+    events:
+      - schedule: rate(4 hours)
+
+  extra-large-deps-128:
+    handler: extra-large-deps/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - extra-large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  extra-large-deps-256:
+    handler: extra-large-deps/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - extra-large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  extra-large-deps-512:
+    handler: extra-large-deps/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - extra-large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  extra-large-deps-1024:
+    handler: extra-large-deps/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - extra-large-deps/**
+    events:
+      - schedule: rate(4 hours)
+  extra-large-deps-1536:
+    handler: extra-large-deps/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - extra-large-deps/**
+    events:
+      - schedule: rate(4 hours)
