@@ -7,13 +7,22 @@ const Lambda  = new AWS.Lambda();
 
 let functions = [];
 
-let listFunctions = co.wrap(function* () {
-  // I know my account has < 100 functions, so...
-  let resp = yield Lambda.listFunctions({ MaxItems: 100 }).promise();
+let listFunctions = co.wrap(function* (marker, acc) {
+  acc = acc || [];
 
-  return resp.Functions
+  let resp = yield Lambda.listFunctions({ Marker: marker, MaxItems: 100 }).promise();
+
+  let functions = resp.Functions
     .map(f => f.FunctionName)
     .filter(fn => fn.includes("coldstart") && !fn.endsWith("run"));
+
+  acc = acc.concat(functions);
+
+  if (resp.NextMarker) {
+    return yield listFunctions(resp.NextMarker, acc);
+  } else {
+    return acc;
+  }
 });
 
 let run = co.wrap(function* () {
@@ -21,8 +30,7 @@ let run = co.wrap(function* () {
     console.log("fetching relevant functions...");
 
     functions = yield listFunctions();
-    console.log(`found ${functions.length} functions`);
-    functions.forEach(console.log);
+    console.log(`found ${functions.length} functions`);        
   }
 
   console.log("invoking $LATEST...");
