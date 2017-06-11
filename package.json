@@ -18,6 +18,11 @@
   "homepage": "https://github.com/theburningmonk/lambda-coldstart-comparison#readme",
   "dependencies": {
     "aws-sdk": "^2.64.0",
-    "co": "^4.6.0"
+    "bluebird": "^3.5.0",
+    "co": "^4.6.0",
+    "fast-stats": "0.0.3",
+    "lodash": "^4.17.4",
+    "mathjs": "^3.13.3",
+    "plotly": "^1.0.6"
   }
 }
