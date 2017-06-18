@@ -13,6 +13,8 @@ package:
     - bluebird-lodash-only/**
     - large-deps/**
     - extra-large-deps/**
+    - extra-extra-large-deps/**
+    - extra-extra-extra-large-deps/**
     - ping/**
 
 functions:
@@ -109,64 +111,126 @@ functions:
       include:
         - bluebird-lodash-only/**
 
-  large-deps-128:
+  L-deps-128:
     handler: large-deps/handler.handler
     memorySize: 128
     package:
       include:
         - large-deps/**
-  large-deps-256:
+  L-deps-256:
     handler: large-deps/handler.handler
     memorySize: 256
     package:
       include:
         - large-deps/**
-  large-deps-512:
+  L-deps-512:
     handler: large-deps/handler.handler
     memorySize: 512
     package:
       include:
         - large-deps/**
-  large-deps-1024:
+  L-deps-1024:
     handler: large-deps/handler.handler
     memorySize: 1024
     package:
       include:
         - large-deps/**
-  large-deps-1536:
+  L-deps-1536:
     handler: large-deps/handler.handler
     memorySize: 1536
     package:
       include:
         - large-deps/**
 
-  extra-large-deps-128:
+  XL-deps-128:
     handler: extra-large-deps/handler.handler
     memorySize: 128
     package:
       include:
         - extra-large-deps/**
-  extra-large-deps-256:
+  XL-deps-256:
     handler: extra-large-deps/handler.handler
     memorySize: 256
     package:
       include:
         - extra-large-deps/**
-  extra-large-deps-512:
+  XL-deps-512:
     handler: extra-large-deps/handler.handler
     memorySize: 512
     package:
       include:
         - extra-large-deps/**
-  extra-large-deps-1024:
+  XL-deps-1024:
     handler: extra-large-deps/handler.handler
     memorySize: 1024
     package:
       include:
         - extra-large-deps/**
-  extra-large-deps-1536:
+  XL-deps-1536:
     handler: extra-large-deps/handler.handler
     memorySize: 1536
     package:
       include:
         - extra-large-deps/**
+
+  XXL-deps-128:
+    handler: extra-extra-large-deps/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - extra-extra-large-deps/**
+  XXL-deps-256:
+    handler: extra-extra-large-deps/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - extra-extra-large-deps/**
+  XXL-deps-512:
+    handler: extra-extra-large-deps/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - extra-extra-large-deps/**
+  XXL-deps-1024:
+    handler: extra-extra-large-deps/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - extra-extra-large-deps/**
+  XXL-deps-1536:
+    handler: extra-extra-large-deps/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - extra-extra-large-deps/**
+
+  XXXL-deps-128:
+    handler: extra-extra-extra-large-deps/handler.handler
+    memorySize: 128
+    package:
+      include:
+        - extra-extra-extra-large-deps/**
+  XXXL-deps-256:
+    handler: extra-extra-extra-large-deps/handler.handler
+    memorySize: 256
+    package:
+      include:
+        - extra-extra-extra-large-deps/**
+  XXXL-deps-512:
+    handler: extra-extra-extra-large-deps/handler.handler
+    memorySize: 512
+    package:
+      include:
+        - extra-extra-extra-large-deps/**
+  XXXL-deps-1024:
+    handler: extra-extra-extra-large-deps/handler.handler
+    memorySize: 1024
+    package:
+      include:
+        - extra-extra-extra-large-deps/**
+  XXXL-deps-1536:
+    handler: extra-extra-extra-large-deps/handler.handler
+    memorySize: 1536
+    package:
+      include:
+        - extra-extra-extra-large-deps/**
