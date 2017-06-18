@@ -14,7 +14,7 @@ let listFunctions = co.wrap(function* (marker, acc) {
 
   let functions = resp.Functions
     .map(f => f.FunctionName)
-    .filter(fn => fn.includes("coldstart") && !fn.endsWith("run"));
+    .filter(fn => fn.includes("aws-coldstart") && !fn.endsWith("run"));
 
   acc = acc.concat(functions);
 
