@@ -2,7 +2,7 @@ service: aws-coldstart-python
 
 provider:
   name: aws
-  runtime: python2.7
+  runtime: python3.6
   versionFunctions: false
 
 functions:
@@ -16,7 +16,7 @@ functions:
 
   memory-512:
     handler: handler.hello
-    memorySize: 512  
+    memorySize: 512
 
   memory-1024:
     handler: handler.hello
