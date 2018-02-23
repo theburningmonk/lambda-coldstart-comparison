@@ -41,10 +41,11 @@ let boxPlot = co.wrap(function*() {
     csharp: { y: [], x: [], type: "box", boxpoints: "all", name: "csharp" },
     java:   { y: [], x: [], type: "box", boxpoints: "all", name: "java" },
     python: { y: [], x: [], type: "box", boxpoints: "all", name: "python" },
-    nodejs6: { y: [], x: [], type: "box", boxpoints: "all", name: "nodejs6" }
+    nodejs6: { y: [], x: [], type: "box", boxpoints: "all", name: "nodejs6" },
+    golang: { y:[], x: [], type: "box", boxpoints: "all", name: "golang"}
   }
 
-  rows.forEach(row => {  
+  rows.forEach(row => {
     byLang[row.lang].y.push(row.value);
     byLang[row.lang].x.push(`${row.memorySize}MB`);
   });
@@ -62,21 +63,21 @@ let boxPlot = co.wrap(function*() {
   };
 
   let graphOptions = { filename: "cold-start-by-language", fileopt: "overwrite" };
-  plotly.plot(data, graphOptions, function (err, msg) {    
+  plotly.plot(data, graphOptions, function (err, msg) {
     let childProc = require('child_process');
     console.log(msg);
 
     childProc.exec(`open -a "Google Chrome" ${msg.url}`);
   });
-  
+
 });
 
 let calcStats = co.wrap(function*() {
   let rows = yield readStats();
   let byLangSize = _.groupBy(rows, r => `${r.lang}-${r.memorySize}MB`);
-  
+
   let statsByLangSize = _.mapValues(
-    byLangSize, 
+    byLangSize,
     rs => {
       let values = rs.map(r => r.value);
       let stats = new Stats();

@@ -8,3 +8,5 @@ csharp/obj/*/
 java/target/
 
 node_modules/
+
+golang/bin

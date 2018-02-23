@@ -1,0 +1,30 @@
+service: aws-coldstart-golang
+
+provider:
+  name: aws
+  runtime: go1.x
+  versionFunctions: false
+
+package:
+  artifact: bin/deploy-package.zip
+
+functions:
+  memory-128:
+    handler: handler
+    memorySize: 128
+
+  memory-256:
+    handler: handler
+    memorySize: 256
+
+  memory-512:
+    handler: handler
+    memorySize: 512
+
+  memory-1024:
+    handler: handler
+    memorySize: 1024
+
+  memory-1536:
+    handler: handler
+    memorySize: 1536
