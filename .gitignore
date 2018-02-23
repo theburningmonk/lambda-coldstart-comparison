@@ -1,10 +1,12 @@
 .serverless/
 
-csharp/bin/*/
-csharp/obj/*/
+csharp/bin
+csharp/obj
 
 .idea/
 
 java/target/
 
 node_modules/
+
+golang/bin
