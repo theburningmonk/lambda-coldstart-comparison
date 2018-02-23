@@ -2,11 +2,11 @@ service: aws-coldstart-csharp
 
 provider:
   name: aws
-  runtime: dotnetcore1.0
+  runtime: dotnetcore2.0
   versionFunctions: false
 
 package:
-  artifact: bin/release/netcoreapp1.0/publish/deploy-package.zip
+  artifact: bin/deploy-package.zip
 
 functions:
   memory-128:
@@ -19,7 +19,7 @@ functions:
 
   memory-512:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello
-    memorySize: 512    
+    memorySize: 512
 
   memory-1024:
     handler: CsharpHandlers::AwsDotnetCsharp.Handler::Hello

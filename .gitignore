@@ -1,7 +1,7 @@
 .serverless/
 
-csharp/bin/*/
-csharp/obj/*/
+csharp/bin
+csharp/obj
 
 .idea/
 
