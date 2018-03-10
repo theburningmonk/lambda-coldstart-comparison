@@ -10,7 +10,7 @@ do
     cd $folder
     pwd
     
-    sls deploy
+    npx sls deploy
 
     cd ..
   done
