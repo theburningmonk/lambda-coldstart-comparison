@@ -23,6 +23,7 @@
     "fast-stats": "0.0.3",
     "lodash": "^4.17.4",
     "mathjs": "^3.13.3",
-    "plotly": "^1.0.6"
+    "plotly": "^1.0.6",
+    "serverless": "1.26.1"
   }
 }
